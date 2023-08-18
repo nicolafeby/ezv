@@ -1,5 +1,5 @@
 import 'package:ezv/presentation/detail/page/detail_page.dart';
-import 'package:ezv/presentation/home/page/home_page.dart';
+import 'package:ezv/presentation/base/page/base_page.dart';
 import 'package:flutter/material.dart';
 import 'package:ezv/core/router/router_constant.dart';
 
@@ -16,7 +16,7 @@ class Router {
       case RouterConstant.detailPage:
         return const DetailPage();
       default:
-        return const HomePage();
+        return const BasePage();
     }
   }
 
