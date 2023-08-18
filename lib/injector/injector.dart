@@ -1,5 +1,10 @@
 
 
+import 'package:ezv/data/datasource/product_datasource.dart';
+import 'package:ezv/data/repositories/product_repository_impl.dart';
+import 'package:ezv/domain/repositories/product_repositories.dart';
+import 'package:ezv/domain/usecases/product_usecase.dart';
+import 'package:ezv/presentation/list/bloc/list_product_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:ezv/core/network/api_service.dart';
 

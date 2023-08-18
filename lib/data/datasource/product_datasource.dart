@@ -5,10 +5,10 @@ abstract class ProductRemoteDataSource {
   Future<ProductEntities> getProduct();
 }
 
-class VoucherRemoteDataSourceImpl implements ProductRemoteDataSource {
+class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
   final ApiService apiService;
 
-  VoucherRemoteDataSourceImpl({required this.apiService});
+  ProductRemoteDataSourceImpl({required this.apiService});
 
   @override
   Future<ProductEntities> getProduct() async {
