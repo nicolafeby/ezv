@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
+import 'package:ezv/core/models/response/product_list_model.dart';
 // import 'package:dio/io.dart';
 import 'package:ezv/core/utils/app_constants.dart';
+import 'package:ezv/domain/entities/product_entities.dart';
 import 'package:ua_client_hints/ua_client_hints.dart';
 
 class ApiService with DioMixin implements Dio {
@@ -27,4 +29,9 @@ class ApiService with DioMixin implements Dio {
         baseUrl: AppConstant.baseUrl,
         contentType: 'application/json',
       );
+
+      Future<ProductEntities> getProduct() async {
+    var response = await get('https://dummyjson.com/products');
+    return ProductModel.fromJson(response.data);
+  }
 }
